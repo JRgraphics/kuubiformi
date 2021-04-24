@@ -1,0 +1,10 @@
+{
+  "labels": {
+    "accepting": "I accept",
+    "email": "Email",
+    "moreDetails": "Tell us something about you",
+    "name": "Name",
+    "phone": "Phone",
+    "submit": "Submit"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "labels": {
+    "accepting": "Hyväksyn",
+    "email": "Sähköposti",
+    "moreDetails": "Kerro meille lisää itsestäsi",
+    "name": "Nimi",
+    "phone": "Puhelin",
+    "submit": "Lähetä"
+  }
+}
