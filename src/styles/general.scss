@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.column-50 {
+  width: 50%;
+}
+
+.column-100 {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+@media screen and (max-width: 850px) {
+  .column-50 {
+    width: 100%;
+  }
+}

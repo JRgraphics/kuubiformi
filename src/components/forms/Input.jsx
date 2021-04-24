@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-const Input = ({ type, name = "", errors = {}, register }) => {
+const Input = ({ type, name = "", errors = {}, register, value = "" }) => {
   const { t } = useTranslation();
 
   const [errorMessages, setErrorMessages] = useState("");
@@ -17,10 +17,17 @@ const Input = ({ type, name = "", errors = {}, register }) => {
     switch (type) {
       case "text":
         return (
-          <>
+          <div className="input__container">
             <div className="input__label">{t("labels." + name)}</div>
             <input
-              className={"input " + (errors[name] ? "input--error" : "")}
+              className={
+                "input " +
+                (errors[name]
+                  ? "input--error"
+                  : value?.length > 0
+                  ? "input--complete"
+                  : "")
+              }
               {...register(name)}
             />
             <div
@@ -31,10 +38,16 @@ const Input = ({ type, name = "", errors = {}, register }) => {
             >
               {errorMessages}
             </div>
-          </>
+          </div>
         );
       case "submit":
         return <input type="submit" />;
+      case "textarea":
+        return (
+          <div className="input__container">
+            <textarea className="input" maxLength={500}></textarea>
+          </div>
+        );
       default:
         return <input type="text" />;
     }

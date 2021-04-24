@@ -1,0 +1,28 @@
+.background {
+  &__container {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.inner-triangle {
+  border-right: 300px solid transparent;
+  border-top: 300px solid $beige;
+  height: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.outer-triangle {
+  border-bottom: 300px solid $pink;
+  border-left: 300px solid transparent;
+  bottom: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  width: 0;
+}

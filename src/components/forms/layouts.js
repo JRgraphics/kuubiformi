@@ -11,7 +11,4 @@ export const registerationInputs = [
     name: "phone",
     type: "text",
   },
-  {
-    type: "submit",
-  },
 ];

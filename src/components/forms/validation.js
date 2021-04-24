@@ -4,6 +4,7 @@ import * as yup from "yup";
 export const registerationSchema = yup.object({
   name: yup.string().required("Required"),
   email: yup.string().required("Required"),
+  moreDetails: yup.string(),
   phone: yup.string().required("Required"),
 });
 

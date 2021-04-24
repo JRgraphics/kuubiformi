@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import i18n from "./i18n";
 
 import { useTranslation } from "react-i18next";
-import Form from "./components/forms/Form";
+import RegisterationPage from "./components/pages/RegisterationPage";
 
 function App() {
   const changeLanguage = (lng) => {
@@ -13,9 +13,13 @@ function App() {
 
   return (
     <div className="App">
+      <div className="background__container">
+        <div className="inner-triangle"></div>
+        <div className="outer-triangle"></div>
+      </div>
       <button onClick={() => changeLanguage("fi")}>fi</button>
       <button onClick={() => changeLanguage("en")}>en</button>
-      <Form />
+      <RegisterationPage />
     </div>
   );
 }

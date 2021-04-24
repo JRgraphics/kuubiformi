@@ -1,0 +1,41 @@
+.page {
+  flex-wrap: wrap;
+  padding: 20px 150px;
+  text-align: left;
+  &__column {
+    width: 50%;
+  }
+  &__title {
+    font-size: 4rem;
+    font-weight: 700;
+    &-container {
+      padding: 30px 0;
+      width: 100%;
+    }
+  }
+}
+
+.column__header {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 650px) {
+  .page {
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    text-align: left;
+    &__column {
+      width: 50%;
+    }
+    &__title {
+      font-size: 4rem;
+      font-weight: 700;
+      &-container {
+        padding: 30px 0;
+        width: 100%;
+      }
+    }
+  }
+}

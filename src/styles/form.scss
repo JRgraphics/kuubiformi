@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  &__header {
+    font-size: 1rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+}

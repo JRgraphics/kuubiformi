@@ -1,0 +1,19 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+.avatar-selection-list {
+  display: flex;
+  flex-wrap: wrap;
+  &-item {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: calc(100% / 3 - 20px);
+  }
+}

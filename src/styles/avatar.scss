@@ -1,0 +1,15 @@
+.avatar {
+  &-preview {
+    height: 100px;
+    margin: auto;
+    position: relative;
+    width: 100px;
+    .preview__image {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
