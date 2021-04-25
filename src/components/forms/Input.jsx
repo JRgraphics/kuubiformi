@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
-const Input = ({ type, name = "", errors = {}, register, value = "" }) => {
+const Input = ({
+  type,
+  name = "",
+  errors = {},
+  register,
+  value = "",
+  required = false,
+}) => {
   const { t } = useTranslation();
 
   const [errorMessages, setErrorMessages] = useState("");
@@ -18,7 +25,10 @@ const Input = ({ type, name = "", errors = {}, register, value = "" }) => {
       case "text":
         return (
           <div className="input__container">
-            <div className="input__label">{t("labels." + name)}</div>
+            <div className="input__label">
+              {t("labels." + name)}
+              {required ? " *" : ""}
+            </div>
             <input
               className={
                 "input " +

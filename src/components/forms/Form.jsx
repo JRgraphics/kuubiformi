@@ -50,6 +50,7 @@ const Form = ({ openTermsAndConditions }) => {
             errors={errors}
             register={register}
             value={getValues(item.name)}
+            required={item.required}
           />
         ))}
       </div>
@@ -79,10 +80,11 @@ const Form = ({ openTermsAndConditions }) => {
           {t("labels.accepting")}
           <Button
             buttonClassName="button--transparent button__termsAndConditions"
-            buttonContent={"terms and conditions"}
+            buttonContent={t("termsAndConditions.link")}
             onClick={openTermsAndConditions}
           />
         </div>
+        {"*"}
       </div>
       <Button
         buttonClassName={"input__submit"}

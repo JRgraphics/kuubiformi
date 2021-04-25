@@ -10,8 +10,8 @@
   "pages": {
     "registerationPage": {
       "headers": {
-        "chooseYourAvatar": "Choose your avatar",
-        "createProfile": "Create profile"
+        "chooseYourAvatar": "Valitse avatarisi",
+        "createProfile": "Luo profiili"
       },
       "mainTitle": {
         "row1": "Kuubi Super",
@@ -20,7 +20,8 @@
     }
   },
   "termsAndConditions": {
-    "title": "Taistele alligaattoreita vastaan ja voita vessapaperia",
-    "content": "Lorem ipsum"
+    "content": "Lorem ipsum",
+    "link": "käyttöehdot",
+    "title": "Taistele alligaattoreita vastaan ja voita vessapaperia"
   }
 }

@@ -4,6 +4,8 @@ import i18n from "./i18n";
 
 import { useTranslation } from "react-i18next";
 import RegisterationPage from "./components/pages/RegisterationPage";
+import Button from "./components/Button";
+import i18next from "i18next";
 
 function App() {
   const changeLanguage = (lng) => {
@@ -17,8 +19,22 @@ function App() {
         <div className="inner-triangle"></div>
         <div className="outer-triangle"></div>
       </div>
-      <button onClick={() => changeLanguage("fi")}>fi</button>
-      <button onClick={() => changeLanguage("en")}>en</button>
+      <Button
+        buttonClassName={
+          "button--transparent button__translation " +
+          (i18next.language === "en" ? "button__translation--activated" : "")
+        }
+        buttonContent={"EN"}
+        onClick={() => changeLanguage("en")}
+      />
+      <Button
+        buttonClassName={
+          "button--transparent button__translation " +
+          (i18next.language === "fi" ? "button__translation--activated" : "")
+        }
+        buttonContent={"FI"}
+        onClick={() => changeLanguage("fi")}
+      />
       <RegisterationPage />
     </div>
   );
