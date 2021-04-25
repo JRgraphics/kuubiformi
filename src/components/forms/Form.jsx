@@ -14,7 +14,7 @@ import { registerationSchema, useYupValidationResolver } from "./validation";
 import Checkbox from "./Checkbox";
 import { avatars } from "../../images";
 
-const Form = ({ openTermsAndConditions }) => {
+const Form = ({ openTermsAndConditions, onSubmit }) => {
   const { t } = useTranslation();
 
   const [currentAvatar, setCurrentAvatar] = useState(avatars[0]);
@@ -28,7 +28,7 @@ const Form = ({ openTermsAndConditions }) => {
     register,
     formState: { errors },
     getValues,
-  } = useForm({ resolver });
+  } = useForm({ resolver, mode: "onChange", reValidateMode: "onChange" });
 
   return (
     <form
@@ -36,6 +36,7 @@ const Form = ({ openTermsAndConditions }) => {
       onSubmit={handleSubmit((data) => {
         data["avatar"] = currentAvatar;
         console.log(data);
+        onSubmit(data);
       })}
     >
       <div className="column-50">
@@ -64,11 +65,7 @@ const Form = ({ openTermsAndConditions }) => {
         <div className="input__label input__label--light">
           {t("labels.moreDetails")}
         </div>
-        <Textarea
-          name={"moreDetails"}
-          register={register}
-          value={getValues("moreDetails")}
-        />
+        <Textarea name={"moreDetails"} register={register} />
       </div>
       <div className="column-100 d-flex align-items-center my-4">
         <Checkbox

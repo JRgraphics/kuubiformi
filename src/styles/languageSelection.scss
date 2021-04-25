@@ -1,0 +1,7 @@
+.language-selection {
+  &__container {
+    display: flex;
+    height: $languageBarHeight;
+    position: relative;
+  }
+}

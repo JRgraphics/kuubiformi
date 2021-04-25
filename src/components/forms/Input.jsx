@@ -1,4 +1,10 @@
 import React, { useState, useEffect } from "react";
+
+// Components
+import Checkmark from "../icons/Checkmark";
+import Close from "../icons/Close";
+
+// Translation
 import { useTranslation } from "react-i18next";
 
 const Input = ({
@@ -20,12 +26,22 @@ const Input = ({
           setErrorMessages("");
         }, 400);
   }, [errors[name]]);
+
   const renderSwitch = () => {
     switch (type) {
       case "text":
         return (
           <div className="input__container">
-            <div className="input__label">
+            <div
+              className={
+                "input__label " +
+                (errorMessages !== ""
+                  ? "color--red"
+                  : value?.length > 0
+                  ? "color--turqouse"
+                  : "")
+              }
+            >
               {t("labels." + name)}
               {required ? " *" : ""}
             </div>
@@ -40,13 +56,22 @@ const Input = ({
               }
               {...register(name)}
             />
+            {errorMessages !== "" ? (
+              <Close className={"input__icon fade-in"} color={"#FF0000"} />
+            ) : value?.length > 0 ? (
+              <Checkmark className={"input__icon fade-in"} color={"#30adb4"} />
+            ) : null}
             <div
               className={
-                "error__container " +
+                "error__container color--red " +
                 (errors[name] ? "error__container--open " : "")
               }
             >
-              {errorMessages}
+              {errorMessages !== ""
+                ? (errorMessages === "isRequired"
+                    ? t("labels." + name) + " "
+                    : "") + t("validationErrors." + errorMessages)
+                : ""}
             </div>
           </div>
         );

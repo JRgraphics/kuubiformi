@@ -49,3 +49,12 @@ button {
     }
   }
 }
+
+@media screen and (max-width: 650px) {
+  .button {
+    &__avatar {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

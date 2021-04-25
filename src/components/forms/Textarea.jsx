@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
-const Textarea = ({ name, register, value = "" }) => {
+const Textarea = ({ name, register }) => {
   const [remainingChars, setRemainingChars] = useState(500);
 
   const handleOnChange = (value) => {
     setRemainingChars(500 - value.length);
-    console.log(remainingChars);
   };
 
   return (
@@ -16,6 +15,7 @@ const Textarea = ({ name, register, value = "" }) => {
         maxLength={500}
         onChange={(e) => handleOnChange(e.target.value)}
       ></textarea>
+      <div className="text-right">{remainingChars}</div>
     </div>
   );
 };

@@ -1,8 +1,8 @@
 .termsAndConditions {
   &__link {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    padding: 0 30px;
+    padding: 0 15px;
   }
   &__container {
     align-items: center;
@@ -17,7 +17,7 @@
     .inner__container {
       background: $white;
       height: 70%;
-      width: 50%;
+      width: 60%;
     }
     .text__container {
       height: calc(100% - 40px);
@@ -41,6 +41,28 @@
     padding: 0 25px;
     .content__row {
       margin: 10px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .termsAndConditions {
+    &__link {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0 15px;
+    }
+    &__container {
+      .inner__container {
+        background: $white;
+        height: 80%;
+        width: 90%;
+      }
+      .text__container {
+        height: calc(100% - 40px);
+        overflow: auto;
+        padding: 15px;
+      }
     }
   }
 }

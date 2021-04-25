@@ -1,4 +1,9 @@
-html {
+html,
+body,
+#root,
+.App,
+.page {
+  height: 100%;
   scroll-behavior: smooth;
 }
 

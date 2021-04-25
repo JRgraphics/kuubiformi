@@ -23,5 +23,11 @@
     "content": "Lorem ipsum",
     "link": "käyttöehdot",
     "title": "Taistele alligaattoreita vastaan ja voita vessapaperia"
+  },
+  "validationErrors": {
+    "invalidEmail": "This doesn't seem to be appropriate email is it?",
+    "invalidNumber": "That's not a number is it?",
+    "maxLength100": "Maximum length is 100 characters",
+    "isRequired": "is required"
   }
 }
