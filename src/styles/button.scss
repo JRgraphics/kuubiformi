@@ -33,4 +33,10 @@ button {
       }
     }
   }
+  &__termsAndConditions {
+    color: $turqouse;
+    font-weight: 700;
+    margin: 0 10px;
+    text-decoration: underline;
+  }
 }

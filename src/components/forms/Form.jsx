@@ -14,7 +14,7 @@ import { registerationSchema, useYupValidationResolver } from "./validation";
 import Checkbox from "./Checkbox";
 import { avatars } from "../../images";
 
-const Form = () => {
+const Form = ({ openTermsAndConditions }) => {
   const { t } = useTranslation();
 
   const [currentAvatar, setCurrentAvatar] = useState(avatars[0]);
@@ -69,12 +69,20 @@ const Form = () => {
           value={getValues("moreDetails")}
         />
       </div>
-      <div className="column-100">
+      <div className="column-100 d-flex align-items-center my-4">
         <Checkbox
           name={"termsAndConditions"}
           register={register}
           onCheck={() => setTermsAndConditionsStatus(!termsAndConditionsStatus)}
         />
+        <div className="termsAndConditions__link flex">
+          {t("labels.accepting")}
+          <Button
+            buttonClassName="button--transparent button__termsAndConditions"
+            buttonContent={"terms and conditions"}
+            onClick={openTermsAndConditions}
+          />
+        </div>
       </div>
       <Button
         buttonClassName={"input__submit"}

@@ -9,12 +9,14 @@ const Textarea = ({ name, register, value = "" }) => {
   };
 
   return (
-    <textarea
-      className="input input__textarea"
-      {...register(name)}
-      maxLength={500}
-      onChange={(e) => handleOnChange(e.target.value)}
-    ></textarea>
+    <div className="textarea__container">
+      <textarea
+        className="input input__textarea"
+        {...register(name)}
+        maxLength={500}
+        onChange={(e) => handleOnChange(e.target.value)}
+      ></textarea>
+    </div>
   );
 };
 export default Textarea;

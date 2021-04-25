@@ -18,5 +18,9 @@
         "row2": "Elite devteam"
       }
     }
+  },
+  "termsAndConditions": {
+    "title": "Taistele alligaattoreita vastaan ja voita vessapaperia",
+    "content": "Lorem ipsum"
   }
 }
