@@ -19,12 +19,16 @@ const Input = ({
 
   const [errorMessages, setErrorMessages] = useState("");
 
-  useEffect(() => {
-    errors[name]
-      ? setErrorMessages(errors[name]?.message)
+  const handleError = (error) => {
+    error
+      ? setErrorMessages(error?.message)
       : setTimeout(() => {
           setErrorMessages("");
         }, 400);
+  };
+
+  useEffect(() => {
+    handleError(errors[name]);
   }, [errors[name]]);
 
   const renderSwitch = () => {
@@ -35,7 +39,7 @@ const Input = ({
             <div
               className={
                 "input__label " +
-                (errorMessages !== ""
+                (errors[name]
                   ? "color--red"
                   : value?.length > 0
                   ? "color--turqouse"

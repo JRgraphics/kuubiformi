@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { useTranslation } from "react-i18next";
 
 // Components
 import Avatar from "../avatars/Avatar";
@@ -9,10 +7,14 @@ import Input from "./Input";
 import Textarea from "./Textarea";
 
 // Form
+import { useForm } from "react-hook-form";
 import { registerationInputs } from "./layouts";
 import { registerationSchema, useYupValidationResolver } from "./validation";
 import Checkbox from "./Checkbox";
 import { avatars } from "../../images";
+
+// Translation
+import { useTranslation } from "react-i18next";
 
 const Form = ({ openTermsAndConditions, onSubmit }) => {
   const { t } = useTranslation();

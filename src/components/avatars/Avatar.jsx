@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 
 // Components
 import AvatarPreview from "./AvatarPreview";
 import AvatarSelectionList from "./AvatarSelectionList";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const Avatar = ({ avatars, onAvatarChange }) => {
   const { t } = useTranslation();
+
+  // State hooks
   const [selectedAvatar, setSelectedAvatar] = useState(avatars[0]);
 
   return (

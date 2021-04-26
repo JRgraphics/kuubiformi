@@ -3,7 +3,12 @@ import React, { useState } from "react";
 // Components
 import Checkmark from "./icons/Checkmark";
 
+// Translation
+import { useTranslation } from "react-i18next";
+
 const SuccessMessage = ({ onClose }) => {
+  const { t } = useTranslation();
+
   const [fader, setFader] = useState("fade-in");
 
   const handleOnClose = () => {
@@ -19,7 +24,9 @@ const SuccessMessage = ({ onClose }) => {
       onClick={handleOnClose}
     >
       <div className="inner__container scale-up">
-        <div className="message col-12 text-center">Success!</div>
+        <div className="message col-12 text-center">
+          {t("messages.success")}
+        </div>
         <Checkmark
           className={"success-message__icon fade-in"}
           color={"#30adb4"}

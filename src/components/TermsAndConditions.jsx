@@ -1,7 +1,11 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+
+// Components
 import Button from "./Button";
 import Close from "./icons/Close";
+
+// Translation
+import { useTranslation } from "react-i18next";
 
 const TermsAndConditions = ({ onClose }) => {
   const { t } = useTranslation();
@@ -15,10 +19,11 @@ const TermsAndConditions = ({ onClose }) => {
     }, 500);
   };
 
-  const contentToColumns = (text) => {
-    const columns = text.split("/n");
+  // Splits string at /n and then creates appropriate HTML elements to divide it to paragraphs
+  const contentToParagraphs = (text) => {
+    const paragraphs = text.split("/n");
     const elementList = [];
-    columns.forEach((item, index) => {
+    paragraphs.forEach((item, index) => {
       elementList.push(
         <div key={index} className="content__row">
           {item}
@@ -29,7 +34,6 @@ const TermsAndConditions = ({ onClose }) => {
       <div className="termsAndConditions__content">{elementList}</div>
     );
 
-    console.log(content);
     return content;
   };
 
@@ -48,7 +52,7 @@ const TermsAndConditions = ({ onClose }) => {
             {t("termsAndConditions.title")}
           </div>
 
-          {contentToColumns(t("termsAndConditions.content"))}
+          {contentToParagraphs(t("termsAndConditions.content"))}
         </div>
       </div>
     </div>

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { avatars } from "../../images";
-import AvatarPreview from "../avatars/AvatarPreview";
-import AvatarSelectionList from "../avatars/AvatarSelectionList";
-import Form from "../forms/Form";
-import TermsAndConditions from "../TermsAndConditions";
 
 // Components
+import Form from "../forms/Form";
 import Loading from "../Loading";
 import SuccessMessage from "../SuccessMessage";
+import TermsAndConditions from "../TermsAndConditions";
+
+// Translation
+import { useTranslation } from "react-i18next";
+import PageHeader from "./PageHeader";
 
 const RegisterationPage = () => {
   const { t } = useTranslation();
@@ -33,14 +33,7 @@ const RegisterationPage = () => {
       {successfulSubmit ? (
         <SuccessMessage onClose={() => setSuccessfulSubmit(false)} />
       ) : null}
-      <div className="page__title-container">
-        <div className="page__title">
-          Kuubi <span className="color--turqouse">Super</span>
-        </div>
-        <div className="page__title">
-          <span className="color--turqouse">Elite</span> devteam
-        </div>
-      </div>
+      <PageHeader rows={["Kuubi Super", "Elite devteam"]} />
       <Form
         openTermsAndConditions={() => setTermsAndConditionsStatus(true)}
         onSubmit={(data) => handleOnSubmit(data)}

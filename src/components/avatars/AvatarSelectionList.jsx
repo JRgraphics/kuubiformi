@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// Components
 import AvatarSelectionListItem from "./AvatarSelectionListItem";
 
 const AvatarSelectionList = ({
@@ -6,8 +8,10 @@ const AvatarSelectionList = ({
   selectAvatar,
   currentSelection,
 }) => {
+  //State hooks
   const [disabled, setDisabled] = useState(false);
 
+  // Disables avatar buttons during the 500ms animation
   const handleSelect = () => {
     setDisabled(true);
     setTimeout(() => {

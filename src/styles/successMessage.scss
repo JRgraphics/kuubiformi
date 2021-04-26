@@ -13,11 +13,17 @@
     .inner__container {
       align-items: center;
       background: $white;
+      border: 2px solid $turqouse;
       display: flex;
       flex-wrap: wrap;
+      font-weight: 600;
       height: 100px;
       justify-content: center;
+      padding: 10px 0;
       width: 200px;
+    }
+    :hover {
+      cursor: pointer;
     }
   }
   &__icon {

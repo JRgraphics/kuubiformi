@@ -7,6 +7,9 @@
     "phone": "Puhelin",
     "submit": "Lähetä"
   },
+  "messages": {
+    "success": "Lähetys onnistui!"
+  },
   "pages": {
     "registerationPage": {
       "headers": {

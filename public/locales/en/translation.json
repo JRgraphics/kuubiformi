@@ -7,6 +7,9 @@
     "phone": "Phone",
     "submit": "Submit"
   },
+  "messages": {
+    "success": "Success!"
+  },
   "pages": {
     "registerationPage": {
       "headers": {

@@ -11,24 +11,26 @@ const LanguageSelection = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
+
+  const LanguageButton = ({ language = "en" }) => {
+    return (
+      <Button
+        buttonClassName={
+          "button--transparent button__translation " +
+          (i18next.language === language
+            ? "button__translation--activated"
+            : "")
+        }
+        buttonContent={language.toUpperCase()}
+        onClick={() => changeLanguage(language)}
+      />
+    );
+  };
+
   return (
     <div className="language-selection__container">
-      <Button
-        buttonClassName={
-          "button--transparent button__translation " +
-          (i18next.language === "en" ? "button__translation--activated" : "")
-        }
-        buttonContent={"EN"}
-        onClick={() => changeLanguage("en")}
-      />
-      <Button
-        buttonClassName={
-          "button--transparent button__translation " +
-          (i18next.language === "fi" ? "button__translation--activated" : "")
-        }
-        buttonContent={"FI"}
-        onClick={() => changeLanguage("fi")}
-      />
+      <LanguageButton language={"en"} />
+      <LanguageButton language={"fi"} />
     </div>
   );
 };
