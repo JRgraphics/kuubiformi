@@ -1,12 +1,16 @@
-import React, { useEffect } from "react";
-import "./App.css";
-import i18n from "./i18n";
+import React from "react";
 
-import { useTranslation } from "react-i18next";
-import RegisterationPage from "./components/pages/RegisterationPage";
-import Button from "./components/Button";
-import i18next from "i18next";
+// Styles
+import "./App.css";
+
+// Components
 import LanguageSelection from "./components/LanguageSelection";
+import RegisterationPage from "./components/pages/RegisterationPage";
+
+// Translation
+import i18n from "./i18n";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 function App() {
   const { t, i18n } = useTranslation();
