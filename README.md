@@ -1,3 +1,7 @@
+# Registeration page application, which allows the user to fill in their data, select an avatar and send the form.
+
+## Backend, which would handle the requests is not currently present, so it is just a frontend demo at this point
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
