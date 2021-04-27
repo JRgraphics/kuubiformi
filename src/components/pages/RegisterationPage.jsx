@@ -20,6 +20,8 @@ const RegisterationPage = () => {
   const [successfulSubmit, setSuccessfulSubmit] = useState(false);
 
   const handleOnSubmit = (data) => {
+    // This function is here to simulate the request to backend by sending the formdata
+    // and then rendering success message afterwards
     setLoading(true);
     setTimeout(() => {
       setLoading(false);

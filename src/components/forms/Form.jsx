@@ -36,8 +36,8 @@ const Form = ({ openTermsAndConditions, onSubmit }) => {
     <form
       className="form"
       onSubmit={handleSubmit((data) => {
-        data["avatar"] = currentAvatar;
-        console.log(data);
+        // Creates a link to the selected static media file
+        data["avatar"] = window.origin + currentAvatar;
         onSubmit(data);
       })}
     >
